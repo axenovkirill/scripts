@@ -1,5 +1,5 @@
 $list = Get-WinUserLanguageList
-$list.Add('ru-RU')
+$list.Add("ru-RU")
 Set-WinUserLanguageList -LanguageList $list -Force
 $Install_Path = "C:\Users\Default\Desktop"
 $WSShell = New-Object -com WScript.Shell
