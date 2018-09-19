@@ -1,1 +1,1 @@
-powershell -ExecutionPolicy Unrestricted -File c:\test.ps1
+powershell -ExecutionPolicy RemoteSigned -File c:\test.ps1
