@@ -1,6 +1,6 @@
 $list = Get-WinUserLanguageList
 $list.Add('ru-RU')
-Set-WinUserLanguageList $list -Force
+Set-WinUserLanguageList -LanguageList $list -Force
 $Install_Path = "C:\Users\Default\Desktop"
 $WSShell = New-Object -com WScript.Shell
 $ShortcutPath = Join-Path -Path $Install_Path -ChildPath "List registracii1.url"
