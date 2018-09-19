@@ -2,5 +2,5 @@
 '$list.Add("ru-RU")' | out-file c:\test.ps1 -append #дописывание информации в конец существующего файла
 'Set-WinUserLanguageList -LanguageList $list -Force' | out-file c:\test.ps1 -append #дописывание информации в конец существующего файла
 Set-ExecutionPolicy RemoteSigned -Force
-c:\test.ps1
+powershell.exe C:\test.ps1
 ls
