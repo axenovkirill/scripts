@@ -1,3 +1,5 @@
+#!/bin/bash
+
 $Install_Path = "C:\Users\Default\Desktop"
 $WSShell = New-Object -com WScript.Shell
 $ShortcutPath = Join-Path -Path $Install_Path -ChildPath "List registracii.url"
