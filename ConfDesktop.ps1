@@ -1,10 +1,10 @@
-$Install_Path = "C:\Users\Public\Desktop"
+$Install_Path = "C:\Users\Default\Desktop"
 $WSShell = New-Object -com WScript.Shell
 $ShortcutPath = Join-Path -Path $Install_Path -ChildPath "List registracii1.url"
 $NewShortcut = $WSShell.CreateShortcut($ShortcutPath)
 $NewShortcut.TargetPath = "https://goo.gl/forms/qfKT57oppr51KgP63"
 $NewShortcut.Save()
-$Install_Path = "C:\Users\Public\Desktop"
+$Install_Path = "C:\Users\Default\Desktop"
 $WSShell = New-Object -com WScript.Shell
 $ShortcutPath = Join-Path -Path $Install_Path -ChildPath "Anketa slushatelya1.url"
 $NewShortcut = $WSShell.CreateShortcut($ShortcutPath)
