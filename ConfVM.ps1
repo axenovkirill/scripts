@@ -141,4 +141,13 @@ $param += $tmZone
 $proc = [System.Diagnostics.Process]::Start( "CMD.exe", $param )
 }
 
-regedit /e с:\putty.reg HKEY_CURRENT_USER\Software\SimonTatham\PuTTY
+Function Set-WallPaper($Value)
+{
+ Set-ItemProperty -path 'HKCU:\Control Panel\Desktop\' -name wallpaper -value $value
+ Set-ItemProperty -path 'HKCU:\Control Panel\Desktop\' -name wallpaperstyle -value "6"
+ rundll32.exe user32.dll, UpdatePerUserSystemParameters
+}
+ 
+Set-WallPaper -value "c:\fl.jpeg"
+
+regedit -s -q c:\putty.reg
