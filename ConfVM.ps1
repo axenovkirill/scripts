@@ -141,6 +141,9 @@ $param += $tmZone
 $proc = [System.Diagnostics.Process]::Start( "CMD.exe", $param )
 }
 
+Set-ItemProperty -Path 'HKCU:\SOFTWARE\Microsoft\Windows\Shell\Associations\UrlAssociations\https\UserChoice' -Name ProgId -Value 'ChromeHTML'
+Set-ItemProperty -Path 'HKCU:\SOFTWARE\Microsoft\Windows\Shell\Associations\UrlAssociations\http\UserChoice' -Name ProgId -Value 'ChromeHTML'
+
 Function Set-WallPaper($Value)
 {
  Set-ItemProperty -path 'HKCU:\Control Panel\Desktop\' -name wallpaper -value $value
