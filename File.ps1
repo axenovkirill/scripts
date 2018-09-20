@@ -11,4 +11,4 @@ Set-ItemProperty -Path 'HKCU:\SOFTWARE\Microsoft\Windows\Shell\Associations\UrlA
 Set-ItemProperty -Path 'HKCU:\SOFTWARE\Microsoft\Windows\Shell\Associations\UrlAssociations\http\UserChoice' -Name ProgId -Value 'ChromeHTML'
 Set-ItemProperty -Path 'HKCU:\Control Panel\Desktop' -Name Wallpaper -Value 'C:\fl.jpeg'
 Get-ScheduledTask -TaskName ServerManager | Disable-ScheduledTask
-
+regedit /e с:\putty.reg HKEY_CURRENT_USER\Software\SimonTatham\PuTTY
