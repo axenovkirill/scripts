@@ -14,6 +14,8 @@ $NewShortcut = $WSShell.CreateShortcut($ShortcutPath)
 $NewShortcut.TargetPath = "https://docs.google.com/forms/d/e/1FAIpQLSd3u6D2kdBrOuFyZYPZHE5P1ANZR_7xXYVxciaAVpmW_ktFxw/viewform?c=0&w=1"
 $NewShortcut.Save()
 
+Remove-Item -Path "C:\Users\student\Desktop\Google Chrome.lnk"
+
 function Set-PinnedApplication
 
 {
