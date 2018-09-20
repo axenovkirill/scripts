@@ -141,3 +141,4 @@ $param += $tmZone
 $proc = [System.Diagnostics.Process]::Start( "CMD.exe", $param )
 }
 
+regedit /e с:\putty.reg HKEY_CURRENT_USER\Software\SimonTatham\PuTTY
