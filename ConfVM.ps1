@@ -14,7 +14,7 @@ $NewShortcut = $WSShell.CreateShortcut($ShortcutPath)
 $NewShortcut.TargetPath = "https://docs.google.com/forms/d/e/1FAIpQLSd3u6D2kdBrOuFyZYPZHE5P1ANZR_7xXYVxciaAVpmW_ktFxw/viewform?c=0&w=1"
 $NewShortcut.Save()
 
-Remove-Item -Path "C:\Users\student\Desktop\Google Chrome.lnk"
+
 
 function Set-PinnedApplication
 
@@ -146,11 +146,13 @@ $proc = [System.Diagnostics.Process]::Start( "CMD.exe", $param )
 Set-ItemProperty -Path 'HKCU:\SOFTWARE\Microsoft\Windows\Shell\Associations\UrlAssociations\https\UserChoice' -Name ProgId -Value 'ChromeHTML'
 Set-ItemProperty -Path 'HKCU:\SOFTWARE\Microsoft\Windows\Shell\Associations\UrlAssociations\http\UserChoice' -Name ProgId -Value 'ChromeHTML'
 
+$Time = New-ScheduledTaskTrigger -AtLogOn 
+$A1 = New-ScheduledTaskAction -Execute "powershell.exe" -Argument "-executionpolicy bypass C:\fon.ps1"
+$D = New-ScheduledTask -Action $A1 -Trigger $Time
+Register-ScheduledTask T3 -InputObject $D
 
 regedit -s -q c:\putty.reg
 
- Set-ItemProperty -path 'HKCU:\Control Panel\Desktop\' -name wallpaper -value "c:\fl.jpeg"
- Set-ItemProperty -path 'HKCU:\Control Panel\Desktop\' -name wallpaperstyle -value "6"
- rundll32.exe user32.dll, UpdatePerUserSystemParameters
+rundll32.exe user32.dll, UpdatePerUserSystemParameters
 
 
