@@ -146,13 +146,11 @@ $proc = [System.Diagnostics.Process]::Start( "CMD.exe", $param )
 Set-ItemProperty -Path 'HKCU:\SOFTWARE\Microsoft\Windows\Shell\Associations\UrlAssociations\https\UserChoice' -Name ProgId -Value 'ChromeHTML'
 Set-ItemProperty -Path 'HKCU:\SOFTWARE\Microsoft\Windows\Shell\Associations\UrlAssociations\http\UserChoice' -Name ProgId -Value 'ChromeHTML'
 
-Function Set-WallPaper($Value)
-{
- Set-ItemProperty -path 'HKCU:\Control Panel\Desktop\' -name wallpaper -value $value
- Set-ItemProperty -path 'HKCU:\Control Panel\Desktop\' -name wallpaperstyle -value "6"
- rundll32.exe user32.dll, UpdatePerUserSystemParameters
-}
- 
-Set-WallPaper -value "c:\fl.jpeg"
 
 regedit -s -q c:\putty.reg
+
+ Set-ItemProperty -path 'HKCU:\Control Panel\Desktop\' -name wallpaper -value "c:\fl.jpeg"
+ Set-ItemProperty -path 'HKCU:\Control Panel\Desktop\' -name wallpaperstyle -value "6"
+ rundll32.exe user32.dll, UpdatePerUserSystemParameters
+
+
