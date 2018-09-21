@@ -146,10 +146,6 @@ $proc = [System.Diagnostics.Process]::Start( "CMD.exe", $param )
 Set-ItemProperty -Path 'HKCU:\SOFTWARE\Microsoft\Windows\Shell\Associations\UrlAssociations\https\UserChoice' -Name ProgId -Value 'ChromeHTML'
 Set-ItemProperty -Path 'HKCU:\SOFTWARE\Microsoft\Windows\Shell\Associations\UrlAssociations\http\UserChoice' -Name ProgId -Value 'ChromeHTML'
 
-$Time = New-ScheduledTaskTrigger -AtLogOn 
-$A1 = New-ScheduledTaskAction -Execute "powershell.exe" -Argument "-executionpolicy bypass C:\fon.ps1"
-$D = New-ScheduledTask -Action $A1 -Trigger $Time
-Register-ScheduledTask T3 -InputObject $D
 
 regedit -s -q c:\putty.reg
 
