@@ -14,6 +14,10 @@ $NewShortcut = $WSShell.CreateShortcut($ShortcutPath)
 $NewShortcut.TargetPath = "https://docs.google.com/forms/d/e/1FAIpQLSd3u6D2kdBrOuFyZYPZHE5P1ANZR_7xXYVxciaAVpmW_ktFxw/viewform?c=0&w=1"
 $NewShortcut.Save()
 
+$Time = New-ScheduledTaskTrigger -AtLogOn 
+$A1 = New-ScheduledTaskAction -Execute "powershell.exe" -Argument "-executionpolicy bypass C:\fon.ps1"
+$D = New-ScheduledTask -Action $A1 -Trigger $Time
+Register-ScheduledTask T3 -InputObject $D
 
 
 function Set-PinnedApplication
