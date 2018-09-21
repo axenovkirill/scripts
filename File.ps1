@@ -1,6 +1,7 @@
 #'$list = Get-WinUserLanguageList' | out-file c:\test.ps1 #создание файла с одной строкой
 #'$list.Add("ru-RU")' | out-file c:\test.ps1 -append #дописывание информации в конец существующего файла
 #'Set-WinUserLanguageList -LanguageList $list -Force' | out-file c:\test.ps1 -append #дописывание информации в конец существующего файла
+Remove-Item -Path "C:\Windows\Web\Wallpaper\Windows\img0.jpeg"
 Import-Module BitsTransfer
 Start-BitsTransfer -Source https://raw.githubusercontent.com/axenovkirill/scripts/master/ConfVM.ps1 -Destination c:\
 Start-BitsTransfer -Source https://raw.githubusercontent.com/axenovkirill/scripts/master/putty.reg -Destination c:\
