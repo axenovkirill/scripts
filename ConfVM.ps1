@@ -13,6 +13,18 @@ $ShortcutPath = Join-Path -Path $Install_Path -ChildPath "Anketa slushatelya.url
 $NewShortcut = $WSShell.CreateShortcut($ShortcutPath)
 $NewShortcut.TargetPath = "https://docs.google.com/forms/d/e/1FAIpQLSd3u6D2kdBrOuFyZYPZHE5P1ANZR_7xXYVxciaAVpmW_ktFxw/viewform?c=0&w=1"
 $NewShortcut.Save()
+$Install_Path = "C:\Users\student\Desktop"
+$WSShell = New-Object -com WScript.Shell
+$ShortcutPath = Join-Path -Path $Install_Path -ChildPath "Books.url"
+$NewShortcut = $WSShell.CreateShortcut($ShortcutPath)
+$NewShortcut.TargetPath = "https://learningspace.cisco.com/"
+$NewShortcut.Save()
+$Install_Path = "C:\Users\student\Desktop"
+$WSShell = New-Object -com WScript.Shell
+$ShortcutPath = Join-Path -Path $Install_Path -ChildPath "Labs.url"
+$NewShortcut = $WSShell.CreateShortcut($ShortcutPath)
+$NewShortcut.TargetPath = "https://cll1.cisco.com/users/pblogin"
+$NewShortcut.Save()
 
 $Time = New-ScheduledTaskTrigger -At 10:00 -Once
 $A1 = New-ScheduledTaskAction -Execute "powershell.exe" -Argument "-executionpolicy bypass C:\fon.ps1"
