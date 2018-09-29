@@ -165,7 +165,17 @@ Set-ItemProperty -Path 'HKCU:\SOFTWARE\Microsoft\Windows\Shell\Associations\UrlA
 
 regedit -s -q c:\putty.reg
 
-rundll32.exe user32.dll, UpdatePerUserSystemParameters
+
+function Set-NewDesktop
+ {
+ Set-ItemProperty -path 'HKCU:\Control Panel\Desktop\' -name wallpaper -value "C:\fl.jpeg"
+ Set-ItemProperty -path 'HKCU:\Control Panel\Desktop\' -name wallpaperstyle -value "6"
+ rundll32.exe user32.dll, UpdatePerUserSystemParameters
+ }
+ Set-NewDesktop
+
+ Remove-Item -Path "C:\Users\student\Desktop\Google Chrome.lnk"
+ 
 restart-computer
 
 
