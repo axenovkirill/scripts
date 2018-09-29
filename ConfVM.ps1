@@ -166,5 +166,7 @@ Set-ItemProperty -Path 'HKCU:\SOFTWARE\Microsoft\Windows\Shell\Associations\UrlA
 regedit -s -q c:\putty.reg
 
 rundll32.exe user32.dll, UpdatePerUserSystemParameters
+restart-computer
+
 
 
