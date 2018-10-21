@@ -146,7 +146,7 @@ Set-PinnedApplication -Action PintoTaskbar -FilePath 'C:\ProgramData\Microsoft\W
 
 Set-PinnedApplication -Action PintoTaskbar -FilePath 'C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Cisco eReader\Cisco eReader.lnk'
 
-Set-PinnedApplication -Action PintoTaskbar -FilePath 'C:\Program Files (x86)\RlabClient\RemoteLabsClient.lnk'
+Set-PinnedApplication -Action PintoTaskbar -FilePath 'C:\Program Files (x86)\RlabClient\RemoteLabsClient.exe'
 Set-PinnedApplication -Action PintoTaskbar -FilePath 'C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Foxit Reader\Foxit Reader.lnk'
 
 $tmZone = "Russian Standard Time"
