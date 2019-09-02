@@ -5,13 +5,13 @@ $Install_Path = "C:\Users\student\Desktop"
 $WSShell = New-Object -com WScript.Shell
 $ShortcutPath = Join-Path -Path $Install_Path -ChildPath "List registracii.url"
 $NewShortcut = $WSShell.CreateShortcut($ShortcutPath)
-$NewShortcut.TargetPath = "http://80.246.242.87/formtools/modules/form_builder/published/registration_form.php"
+$NewShortcut.TargetPath = "https://registration.trainhub.ru"
 $NewShortcut.Save()
 $Install_Path = "C:\Users\student\Desktop"
 $WSShell = New-Object -com WScript.Shell
 $ShortcutPath = Join-Path -Path $Install_Path -ChildPath "Anketa slushatelya.url"
 $NewShortcut = $WSShell.CreateShortcut($ShortcutPath)
-$NewShortcut.TargetPath = "http://80.246.242.87/formtools/modules/form_builder/published/Feedback.php"
+$NewShortcut.TargetPath = "https://feedback.trainhub.ru"
 $NewShortcut.Save()
 $Install_Path = "C:\Users\student\Desktop"
 $WSShell = New-Object -com WScript.Shell
